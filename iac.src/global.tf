@@ -8,10 +8,10 @@ provider "aws" {
   default_tags {
     tags = {
       Project        = "rp2"
-      Environment    = "default"
+      Environment    = "dev"
       UniqueId       = var.rp2_id
       Domain         = var.custom_domain
-      Contact        = "github.com/eistrati"
+      owner        = "tadieter"
       awsApplication = try(trimspace(var.app_arn), "") != "" ? var.app_arn : null
     }
   }
